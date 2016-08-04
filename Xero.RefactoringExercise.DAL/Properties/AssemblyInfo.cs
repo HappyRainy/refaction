@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Xero.RefactoringExercise.Api")]
-[assembly: AssemblyDescription("Xero Refactoring Exercise - Web Api")]
+[assembly: AssemblyTitle("Xero.RefactoringExercise.DAL")]
+[assembly: AssemblyDescription("Xeror refactoring exercise data access layer")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Xero")]
-[assembly: AssemblyProduct("refactor_me")]
+[assembly: AssemblyProduct("Xero.RefactoringExercise.DAL")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("20ab69f9-f2d3-4a68-96c3-424ec8b9406e")]
+[assembly: Guid("041efb0d-6597-444d-8c35-6af04918ba98")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,7 +29,8 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Revision and Build Numbers 
+// You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

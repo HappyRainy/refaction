@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.WebApi", "refactor-me\Xero.RefactoringExercise.WebApi.csproj", "{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.WebApi.Tests", "Xero.RefactoringExercise.Tests\Xero.RefactoringExercise.WebApi.Tests.csproj", "{CEFCF93E-EA24-432A-99CA-10988539AA6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.Domain", "Xero.RefactoringExercise.Domain\Xero.RefactoringExercise.Domain.csproj", "{F36230F9-63C4-4060-A6A2-CC60D51E205D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.DAL", "Xero.RefactoringExercise.DAL\Xero.RefactoringExercise.DAL.csproj", "{041EFB0D-6597-444D-8C35-6AF04918BA98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEFCF93E-EA24-432A-99CA-10988539AA6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFCF93E-EA24-432A-99CA-10988539AA6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFCF93E-EA24-432A-99CA-10988539AA6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFCF93E-EA24-432A-99CA-10988539AA6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36230F9-63C4-4060-A6A2-CC60D51E205D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36230F9-63C4-4060-A6A2-CC60D51E205D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36230F9-63C4-4060-A6A2-CC60D51E205D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36230F9-63C4-4060-A6A2-CC60D51E205D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{041EFB0D-6597-444D-8C35-6AF04918BA98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041EFB0D-6597-444D-8C35-6AF04918BA98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041EFB0D-6597-444D-8C35-6AF04918BA98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041EFB0D-6597-444D-8C35-6AF04918BA98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

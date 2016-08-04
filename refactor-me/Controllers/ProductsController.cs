@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net;
 using System.Web.Http;
-using refactor_me.Models;
+using Xero.RefactoringExercise.WebApi.Models;
 
-namespace refactor_me.Controllers
+namespace Xero.RefactoringExercise.WebApi.Controllers
 {
     [RoutePrefix("products")]
     public class ProductsController : ApiController
