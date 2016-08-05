@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Net;
 using System.Web.Http;
-using Xero.RefactoringExercise.WebApi.Models;
+using refactor_me.Models;
+using Xero.RefactoringExercise.WebApi.Controllers.Support;
 
 namespace Xero.RefactoringExercise.WebApi.Controllers
 {
     [RoutePrefix("products")]
-    public class ProductsController : ApiController
+    public class ProductsController : ControllerBase
     {
-        [Route]
+        [Route("~/products")]
         [HttpGet]
         public Products GetAll()
         {

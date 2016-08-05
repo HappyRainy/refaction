@@ -4,17 +4,15 @@ using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
-using Xero.RefactoringExercise.DAL.Supports;
 
 namespace Xero.RefactoringExercise.DAL.Supports
 {
-    public class XeroRefactoringExerciseRepository<TContext> : IRepository
+    public class EntityFrameworkRepository<TContext> : IRepository
         where TContext: DbContext
     {
         protected readonly TContext Context;
 
-        public XeroRefactoringExerciseRepository(TContext context)
+        public EntityFrameworkRepository(TContext context)
         {
             this.Context = context;
         }

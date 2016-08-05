@@ -1,15 +1,14 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Xero.RefactoringExercise.Api")]
-[assembly: AssemblyDescription("Xero Refactoring Exercise - Web Api")]
+[assembly: AssemblyTitle("Xero.RefactoringExercise.WebApi")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Xero")]
-[assembly: AssemblyProduct("refactor_me")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Xero.RefactoringExercise.WebApi")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

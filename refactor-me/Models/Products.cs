@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
 
-namespace Xero.RefactoringExercise.WebApi.Models
+namespace refactor_me.Models
 {
     public class Products
     {

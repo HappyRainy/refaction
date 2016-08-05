@@ -44,7 +44,7 @@ namespace Xero.RefactoringExercise.DAL.Supports
             where TEntity : class, IEntity;
 
         void Create<TEntity>(TEntity entity, string createdBy = null)
-        where TEntity : class, IEntity;
+            where TEntity : class, IEntity;
 
         void Update<TEntity>(TEntity entity, string modifiedBy = null)
             where TEntity : class, IEntity;

@@ -15,6 +15,8 @@ namespace Xero.RefactoringExercise.WebApi.App_Start
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
 
+        public static IKernel Kernel => bootstrapper.Kernel;
+
         /// <summary>
         /// Starts the application
         /// </summary>
@@ -39,13 +41,7 @@ namespace Xero.RefactoringExercise.WebApi.App_Start
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var kernel = new StandardKernel(
-                new NinjectSettings
-                {
-                    // Allow use of private constructors for domain objects in ORM
-                    InjectNonPublic = true
-                });
-
+            var kernel = new StandardKernel();
             try
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);

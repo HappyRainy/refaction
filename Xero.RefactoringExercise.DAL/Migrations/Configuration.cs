@@ -1,19 +1,19 @@
 using System.Collections.Generic;
+using System.Data.Entity;
 using Xero.RefactoringExercise.DAL.Entities;
-using Xero.RefactoringExercise.DAL.Supports;
 
 namespace Xero.RefactoringExercise.DAL.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<XeroRefactoringExerciseContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(XeroRefactoringExerciseContext context)
+        protected override void Seed(DbContext context)
         {
             var products = new List<Product>()
             {

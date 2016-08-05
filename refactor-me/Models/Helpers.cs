@@ -1,7 +1,7 @@
 ﻿using System.Data.SqlClient;
 using System.Web;
 
-namespace Xero.RefactoringExercise.WebApi.Models
+namespace refactor_me.Models
 {
     public class Helpers
     {

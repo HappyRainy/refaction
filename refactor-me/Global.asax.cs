@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using Xero.RefactoringExercise.WebApi.App_Start;
 
 namespace Xero.RefactoringExercise.WebApi
 {

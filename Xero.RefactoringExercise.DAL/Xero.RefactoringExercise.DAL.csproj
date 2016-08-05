@@ -64,13 +64,11 @@
       <DependentUpon>201608040753571_AddProductOption.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Supports\XeroRefactoringExerciseContext.cs" />
     <Compile Include="Supports\Entity.cs" />
     <Compile Include="Supports\IEntity.cs" />
     <Compile Include="Supports\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XeroRefactoringExerciseDALModule.cs" />
-    <Compile Include="Supports\XeroRefactoringExerciseRepository.cs" />
+    <Compile Include="Supports\EntityFrameworkRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
