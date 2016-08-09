@@ -9,5 +9,12 @@ namespace Xero.RefactoringExercise.WebApi
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
+
+        protected void Application_PreSendRequestHeaders()
+        {
+            Response.Headers.Remove("Server");
+            Response.Headers.Remove("Allow");
+            Response.Headers.Remove("X-Sourcefiles");
+        }
     }
 }

@@ -34,7 +34,7 @@ namespace Xero.RefactoringExercise.DAL.Supports
             where TEntity : class, IEntity;
 
 
-        TEntity GetById<TEntity>(object id)
+        TEntity GetById<TEntity>(Guid id)
             where TEntity : class, IEntity;
 
         int GetCount<TEntity>(Expression<Func<TEntity, bool>> filter = null)
@@ -47,9 +47,6 @@ namespace Xero.RefactoringExercise.DAL.Supports
             where TEntity : class, IEntity;
 
         void Update<TEntity>(TEntity entity, string modifiedBy = null)
-            where TEntity : class, IEntity;
-
-        void Delete<TEntity>(object id)
             where TEntity : class, IEntity;
 
         void Delete<TEntity>(TEntity entity)

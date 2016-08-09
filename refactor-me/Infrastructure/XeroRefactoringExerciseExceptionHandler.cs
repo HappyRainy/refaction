@@ -5,7 +5,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
+using System.Web.Http.Results;
 using NLog;
+using Xero.RefactoringExercise.WebApi.Infrastructure.Exceptions;
 
 namespace Xero.RefactoringExercise.WebApi.Infrastructure
 {
@@ -28,24 +30,43 @@ namespace Xero.RefactoringExercise.WebApi.Infrastructure
             var contentNegotiator = context.RequestContext.Configuration.Services.GetContentNegotiator();
             var formatters = context.RequestContext.Configuration.Formatters;
 
-
             _log.Info("Exception handler hit with exception type '{0}'.", context.Exception.GetType());
 
-            HttpStatusCode code;
-
             _log.Fatal(context.Exception, "Unhandled exception caught.");
-
-            code = HttpStatusCode.InternalServerError;
 
             // When an exception occurs we want to log request body to aid in resolving issues
             await LogRequestBody(context.Request);
 
-            context.Result = context.Result = new TextPlainErrorResult
+            ErrorResultContent content;
+            HttpStatusCode code;
+
+            var responseException = context.Exception as IResponseException;
+
+            // Customed infrastructure exception
+            if (responseException != null)
             {
-                Request = context.ExceptionContext.Request,
-                Content = "Oops! Sorry! Something went wrong." +
-                          "Please contact lijingch@gmail.com. I can fix for you."
-            };
+                _log.Fatal(context.Exception, "Custom exception caught, using its response.");
+
+                code = responseException.Code;
+                content = new ErrorResultContent(responseException.ClientMessage.ToString());
+
+            }
+
+            // All the other exceptions
+            else
+            {
+                _log.Fatal(context.Exception, "Unhandled exception caught.");
+
+                code = HttpStatusCode.InternalServerError;
+                content = new ErrorResultContent("Oops! Sorry! Something went wrong. Please contact lijingch@gmail.com. I can fix for you.");
+            }
+
+            context.Result = new NegotiatedContentResult<ErrorResultContent>(code,
+                content,
+                contentNegotiator,
+                context.Request,
+                formatters
+                );
         }
 
 
@@ -61,20 +82,15 @@ namespace Xero.RefactoringExercise.WebApi.Infrastructure
                 _log.Info(new {RequestBody = requestBody});
         }
 
-        private class TextPlainErrorResult : IHttpActionResult
+        private class ErrorResultContent
         {
-            public HttpRequestMessage Request { get; set; }
-
-            public string Content { get; set; }
-
-            public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
+            public ErrorResultContent(string message)
             {
-                HttpResponseMessage response =
-                                 new HttpResponseMessage(HttpStatusCode.InternalServerError);
-                response.Content = new StringContent(Content);
-                response.RequestMessage = Request;
-                return Task.FromResult(response);
+                Message = message;
             }
+
+            // ReSharper disable once MemberCanBePrivate.Local
+            public string Message { get; private set; }
         }
     }
 }

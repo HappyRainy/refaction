@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDbContext.cs" />
+    <Compile Include="DALModule.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ProductOption.cs" />
     <Compile Include="Migrations\201608040714311_AddProduct.cs" />

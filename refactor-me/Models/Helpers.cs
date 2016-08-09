@@ -1,7 +1,8 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 using System.Web;
 
-namespace refactor_me.Models
+namespace Xero.RefactoringExercise.WebApi.Models
 {
     public class Helpers
     {
@@ -9,8 +10,15 @@ namespace refactor_me.Models
 
         public static SqlConnection NewConnection()
         {
-            var connstr = ConnectionString.Replace("{DataDirectory}", HttpContext.Current.Server.MapPath("~/App_Data"));
+            var connstr = ConnectionString.Replace("{DataDirectory}", MakeAbsolutePath("~/App_Data"));
             return new SqlConnection(connstr);
+        }
+
+        private static string MakeAbsolutePath(string relativePath)
+        {
+            return HttpContext.Current == null
+                ? string.Format("{0}\\{1}", AppDomain.CurrentDomain.BaseDirectory, relativePath.TrimStart('~', '/', '\\'))
+                : HttpContext.Current.Server.MapPath(relativePath);
         }
     }
 }

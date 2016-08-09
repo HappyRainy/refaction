@@ -21,7 +21,8 @@ namespace Xero.RefactoringExercise.DAL.Migrations
                     Name = c.String(nullable: false, maxLength: 100),
                     Description = c.String(nullable: true, maxLength: 500)
                 })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .Index(t => new { t.ProductId, t.Name}, unique: true);
 
             AddForeignKey("dbo.ProductOption", "ProductId", "dbo.Product", "Id", cascadeDelete: true);
         }

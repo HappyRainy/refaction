@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.WebApi.Tests", "Xero.RefactoringExercise.Tests\Xero.RefactoringExercise.WebApi.Tests.csproj", "{CEFCF93E-EA24-432A-99CA-10988539AA6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.Tests", "Xero.RefactoringExercise.Tests\Xero.RefactoringExercise.Tests.csproj", "{CEFCF93E-EA24-432A-99CA-10988539AA6C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.Domain", "Xero.RefactoringExercise.Domain\Xero.RefactoringExercise.Domain.csproj", "{F36230F9-63C4-4060-A6A2-CC60D51E205D}"
 EndProject

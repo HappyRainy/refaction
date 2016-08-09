@@ -1,3 +1,5 @@
+using Xero.RefactoringExercise.Domain;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Xero.RefactoringExercise.WebApi.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Xero.RefactoringExercise.WebApi.App_Start.NinjectWebCommon), "Stop")]
 
@@ -63,6 +65,10 @@ namespace Xero.RefactoringExercise.WebApi.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-        }        
+            kernel.Load(
+                new DomainModule(),
+                new WebApiModule()
+                );
+        }
     }
 }

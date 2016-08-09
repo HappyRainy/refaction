@@ -1,21 +1,20 @@
-using System.Collections.Generic;
 using System.Data.Entity;
-using Xero.RefactoringExercise.DAL.Entities;
 
 namespace Xero.RefactoringExercise.DAL.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<DbContext>
+    public sealed class Configuration<TDbContext> : DbMigrationsConfiguration<TDbContext>
+        where TDbContext : DbContext
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(DbContext context)
+        protected override void Seed(TDbContext context)
         {
-            var products = new List<Product>()
+            /*var products = new List<Product>()
             {
                 new Product()
                 {
@@ -36,11 +35,11 @@ namespace Xero.RefactoringExercise.DAL.Migrations
                 new ProductOption() {Name = "Black", Product = products[1], Description = "Black Apple iPhone 6S"}
             };
 
-            products.ForEach(s => context.Set<Product>().AddOrUpdate(s));
+            products.ForEach(s => context.Set<Product>().Add(s));
             context.SaveChanges();
 
-            productOptions.ForEach(s => context.Set<ProductOption>().AddOrUpdate(s));
-            context.SaveChanges();
+            productOptions.ForEach(s => context.Set<ProductOption>().Add(s));
+            context.SaveChanges();*/
         }
     }
 }

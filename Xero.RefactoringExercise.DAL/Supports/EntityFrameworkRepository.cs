@@ -95,10 +95,10 @@ namespace Xero.RefactoringExercise.DAL.Supports
             return GetQueryable<TEntity>(filter, orderBy, includeProperties).FirstOrDefault();
         }
 
-        public virtual TEntity GetById<TEntity>(object id)
+        public virtual TEntity GetById<TEntity>(Guid id)
             where TEntity : class, IEntity
         {
-            return Context.Set<TEntity>().Find(id);
+            return Context.Set<TEntity>().FirstOrDefault(entity => entity.Id.Equals(id));
         }
 
         public virtual int GetCount<TEntity>(Expression<Func<TEntity, bool>> filter = null)
@@ -128,13 +128,6 @@ namespace Xero.RefactoringExercise.DAL.Supports
             entity.UpdatedBy = modifiedBy;
             Context.Set<TEntity>().Attach(entity);
             Context.Entry(entity).State = EntityState.Modified;
-        }
-
-        public virtual void Delete<TEntity>(object id)
-            where TEntity : class, IEntity
-        {
-            TEntity entity = Context.Set<TEntity>().Find(id);
-            Delete(entity);
         }
 
         public virtual void Delete<TEntity>(TEntity entity)

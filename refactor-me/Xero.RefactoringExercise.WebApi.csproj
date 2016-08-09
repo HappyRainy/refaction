@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -147,9 +151,21 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="App_Start\WebApiRouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductOptionsController.cs" />
     <Compile Include="Controllers\Support\ControllerBase.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Infrastructure\Exceptions\ForbiddenException.cs" />
+    <Compile Include="Infrastructure\Exceptions\IResponseException.cs" />
+    <Compile Include="Infrastructure\Exceptions\UnauthorizedException.cs" />
+    <Compile Include="Infrastructure\Filters\AuthenticatedOnlyAttribute.cs" />
+    <Compile Include="Infrastructure\Filters\AuthenticationFilter.cs" />
+    <Compile Include="Infrastructure\WebApiAppContext.cs" />
+    <Compile Include="Models\Mapping\WebApiMapperProfile.cs" />
+    <Compile Include="Models\ProductOptionViewModel.cs" />
+    <Compile Include="Models\ProductOptionsViewModel.cs" />
+    <Compile Include="Models\ProductsViewModel.cs" />
+    <Compile Include="WebApiModule.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -158,6 +174,7 @@
     <Compile Include="Infrastructure\LoggingControllerActivator.cs" />
     <Compile Include="Infrastructure\XeroRefactoringExerciseExceptionHandler.cs" />
     <Compile Include="Models\Helpers.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -170,8 +187,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Infrastructure\Exceptions\" />
+    <ProjectReference Include="..\Xero.RefactoringExercise.Domain\Xero.RefactoringExercise.Domain.csproj">
+      <Project>{f36230f9-63c4-4060-a6a2-cc60d51e205d}</Project>
+      <Name>Xero.RefactoringExercise.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
