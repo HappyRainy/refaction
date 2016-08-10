@@ -125,7 +125,7 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\refactor-me\Xero.RefactoringExercise.WebApi.csproj">
+    <ProjectReference Include="..\Xero.RefactoringExercise.WebApi\Xero.RefactoringExercise.WebApi.csproj">
       <Project>{20ab69f9-f2d3-4a68-96c3-424ec8b9406e}</Project>
       <Name>Xero.RefactoringExercise.WebApi</Name>
     </ProjectReference>
@@ -137,15 +137,6 @@
       <Project>{f36230f9-63c4-4060-a6a2-cc60d51e205d}</Project>
       <Name>Xero.RefactoringExercise.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Data\Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\Database_log.ldf">
-      <DependentUpon>Database.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

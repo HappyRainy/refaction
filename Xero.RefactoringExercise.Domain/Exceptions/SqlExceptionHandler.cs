@@ -4,6 +4,9 @@ using System.Data.SqlClient;
 
 namespace Xero.RefactoringExercise.Domain.Exceptions
 {
+    /// <summary>
+    /// Sql exception handler to help throwing proper exceptions to upper layer
+    /// </summary>
     public static class SqlExceptionHandler
     {
         public static void HandleException(Exception exception)

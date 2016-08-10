@@ -20,7 +20,7 @@ namespace Xero.RefactoringExercise.Tests.WebApi.Infrastructure.Filters
         [TestInitialize]
         public void Init()
         {
-            _userContext = new SimpleUserContext("Jing");
+            _userContext = new AuthenticatedUserContext("Jing");
             _userContextService = new Mock<IUserContextService>(MockBehavior.Strict);
 
             Kernel.RebindMock(_userContextService);

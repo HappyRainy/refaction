@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Web.Http;
 using AutoMapper;
 using NLog;
@@ -14,6 +13,9 @@ using Xero.RefactoringExercise.WebApi.Models;
 
 namespace Xero.RefactoringExercise.WebApi.Controllers
 {
+    /// <summary>
+    /// Actions for product options
+    /// </summary>
     [RoutePrefix("products/{productId:guid}/options")]
     public class ProductOptionsController : ControllerBase
     {

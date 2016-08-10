@@ -15,7 +15,7 @@ namespace Xero.RefactoringExercise.DAL.Migrations
                     CreatedOn = c.DateTime(nullable: false, defaultValue: DateTime.UtcNow),
                     UpdatedOn = c.DateTime(nullable: true),
                     CreatedBy = c.String(nullable: false, maxLength:128),
-                    UpdatedBy = c.String(nullable: false, maxLength: 128),
+                    UpdatedBy = c.String(nullable: true, maxLength: 128),
                     RowVersion = c.Binary(nullable: false, fixedLength: true, timestamp: true, storeType: "rowversion"),
                     Name = c.String(nullable: false,  maxLength: 100),
                     Description = c.String(nullable: true, maxLength: 500),

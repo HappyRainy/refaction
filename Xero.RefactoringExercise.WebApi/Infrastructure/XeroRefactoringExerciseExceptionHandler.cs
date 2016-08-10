@@ -11,6 +11,9 @@ using Xero.RefactoringExercise.WebApi.Infrastructure.Exceptions;
 
 namespace Xero.RefactoringExercise.WebApi.Infrastructure
 {
+    /// <summary>
+    /// Global exception handler
+    /// </summary>
     public class XeroRefactoringExerciseExceptionHandler : ExceptionHandler
     {
         private static readonly Logger _log = LogManager.GetCurrentClassLogger();
@@ -74,7 +77,6 @@ namespace Xero.RefactoringExercise.WebApi.Infrastructure
         {
             var requestBody =
                 (request.Method == HttpMethod.Post || request.Method == HttpMethod.Put)
-                    && !request.RequestUri.AbsolutePath.Contains("login")
                     ? await request.Content.ReadAsStringAsync()
                     : null;
 
@@ -89,7 +91,6 @@ namespace Xero.RefactoringExercise.WebApi.Infrastructure
                 Message = message;
             }
 
-            // ReSharper disable once MemberCanBePrivate.Local
             public string Message { get; private set; }
         }
     }

@@ -1,13 +1,14 @@
 ﻿using AutoMapper;
 using Ninject.Modules;
-using Xero.RefactoringExercise.DAL.Entities;
 using Xero.RefactoringExercise.DAL.Supports;
-using Xero.RefactoringExercise.Domain.Modles;
 using Xero.RefactoringExercise.Domain.Modles.Mapping;
 using Xero.RefactoringExercise.Domain.Services;
 
 namespace Xero.RefactoringExercise.Domain
 {
+    /// <summary>
+    /// Ninject module for domain layer
+    /// </summary>
     public class DomainModule : NinjectModule
     {
         public override void Load()

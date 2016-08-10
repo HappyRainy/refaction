@@ -7,6 +7,10 @@ using System.Linq.Expressions;
 
 namespace Xero.RefactoringExercise.DAL.Supports
 {
+    /// <summary>
+    /// Entity framework generic repository implemenation
+    /// </summary>
+    /// <typeparam name="TContext"></typeparam>
     public class EntityFrameworkRepository<TContext> : IRepository
         where TContext: DbContext
     {

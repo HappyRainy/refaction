@@ -4,6 +4,9 @@ using Xero.RefactoringExercise.WebApi.Controllers.Support;
 
 namespace Xero.RefactoringExercise.WebApi.Controllers
 {
+    /// <summary>
+    /// Error controller for handeling 404 results
+    /// </summary>
     public class ErrorController : ControllerBase
     {
         static readonly Logger _log = LogManager.GetCurrentClassLogger();

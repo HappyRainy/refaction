@@ -1,6 +1,10 @@
 # refaction
 A terribly written Web API project that can be used as a test for potential C# applicants.  It's terrible on purpose, so that you can show us how we can improve it.
 
+## Getting the refacted solution running
+
+The refacted solution is based on SQL Server Express, no more data file. The Web Api application will try to initial a data base on the local instance of the SQL Server Express and it will load some sample data into the db at the fist time of the initialization. For all PUT, POST and DELETE routes, Web Api requires authentication first. To be authenticated as tester user, you need to add `AuthTick` into request header and set the value to `1F7A570C-9764-41E5-9F0E-212FA2C703AC` before sending it out. There are bunch of other enhancements, enjoy.
+
 ## Getting started for applicants
 
 Fork this repository and make your changes to this project to make it better.  Simple.  There are no rules, except that we know that this project is very badly written, on purpose.  So, your job, should you choose to accept it, is to make the project better in any way you see fit.

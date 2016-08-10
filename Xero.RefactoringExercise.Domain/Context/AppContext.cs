@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Xero.RefactoringExercise.Domain.Context
 {
+
+    /// <summary>
+    /// Application context, used to help better logging per request/task
+    /// </summary>
     public abstract class AppContext
     {
         protected AppContext(string id)

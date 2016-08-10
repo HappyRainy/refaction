@@ -139,10 +139,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database.mdf" />
-    <Content Include="App_Data\Database_log.ldf">
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -169,13 +165,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\HttpNotFoundAwareControllerActionSelector.cs" />
-    <Compile Include="Infrastructure\HttpNotFoundAwareHttpControllerSelector.cs" />
     <Compile Include="Infrastructure\LoggingControllerActivator.cs" />
     <Compile Include="Infrastructure\XeroRefactoringExerciseExceptionHandler.cs" />
-    <Compile Include="Models\Helpers.cs" />
     <Compile Include="Models\ProductViewModel.cs" />
-    <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

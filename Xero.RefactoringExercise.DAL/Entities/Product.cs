@@ -6,6 +6,7 @@ using Xero.RefactoringExercise.DAL.Supports;
 
 namespace Xero.RefactoringExercise.DAL.Entities
 {
+    [Table("Product")]
     public class Product : Entity
     {
         [Required]

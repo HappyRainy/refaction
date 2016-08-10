@@ -54,9 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDbContext.cs" />
-    <Compile Include="DALModule.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ProductOption.cs" />
+    <Compile Include="Migrations\201608040714300_Init.cs" />
+    <Compile Include="Migrations\201608040714300_Init.Designer.cs">
+      <DependentUpon>201608040714300_Init.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201608040714311_AddProduct.cs" />
     <Compile Include="Migrations\201608040714311_AddProduct.Designer.cs">
       <DependentUpon>201608040714311_AddProduct.cs</DependentUpon>
@@ -77,6 +80,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201608040714300_Init.resx">
+      <DependentUpon>201608040714300_Init.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608040714311_AddProduct.resx">
       <DependentUpon>201608040714311_AddProduct.cs</DependentUpon>
     </EmbeddedResource>

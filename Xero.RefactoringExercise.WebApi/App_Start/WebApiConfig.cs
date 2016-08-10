@@ -61,10 +61,10 @@ namespace Xero.RefactoringExercise.WebApi.App_Start
             var activatorArgument = new ConstructorArgument("instance", config.Services.GetService(typeof (IHttpControllerActivator)));
 
             var controllerActivator = kernel.Get<LoggingControllerActivator>(activatorArgument);
-            var controllerSelector = kernel.Get<HttpNotFoundAwareHttpControllerSelector>(configArgument);
+            //var controllerSelector = kernel.Get<HttpNotFoundAwareHttpControllerSelector>(configArgument);
 
             config.Services.Replace(typeof (IHttpControllerActivator), controllerActivator);
-            config.Services.Replace(typeof(IHttpControllerSelector), controllerSelector);
+            //config.Services.Replace(typeof(IHttpControllerSelector), controllerSelector);
 
             // Use Ninject for all dependencies
             config.DependencyResolver = new NinjectDependencyResolver(NinjectWebCommon.Kernel);

@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Net;
 using System.Web.Http;
-using System.Web.Http.Results;
 using AutoMapper;
 using NLog;
 using Xero.RefactoringExercise.Domain.Exceptions;
@@ -16,6 +13,9 @@ using Xero.RefactoringExercise.WebApi.Models;
 
 namespace Xero.RefactoringExercise.WebApi.Controllers
 {
+    /// <summary>
+    /// Actions for products
+    /// </summary>
     [RoutePrefix("products")]
     public class ProductsController : ControllerBase
     {

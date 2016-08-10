@@ -4,6 +4,9 @@ using Xero.RefactoringExercise.Domain.Modles;
 
 namespace Xero.RefactoringExercise.WebApi.Models.Mapping
 {
+    /// <summary>
+    /// Auto mapper profile for web api 
+    /// </summary>
     public class WebApiMapperProfile : Profile
     {
         protected override void Configure()

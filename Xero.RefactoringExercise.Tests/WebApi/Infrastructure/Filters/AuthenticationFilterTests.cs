@@ -62,7 +62,7 @@ namespace Xero.RefactoringExercise.Tests.WebApi.Infrastructure.Filters
         {
 
             var context = MakeAuthContext("STERCES");
-            var authenticated = new SimpleUserContext("Jing");
+            var authenticated = new AuthenticatedUserContext("Jing");
 
             _userContextService.Setup(x => x.GetByTicket("STERCES")).Returns(authenticated);
             _userContextService.Setup(x => x.Login(authenticated));

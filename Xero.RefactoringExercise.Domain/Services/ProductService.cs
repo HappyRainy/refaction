@@ -38,7 +38,9 @@ namespace Xero.RefactoringExercise.Domain.Services
         /// <returns></returns>
         public IEnumerable<ProductDomainModel> FindProductsByName(string productName)
         {
-            return Mapper.Map<List<ProductDomainModel>>(_repository.Get<Product>( products => products.Name.Contains(productName), products => products.OrderBy(p => p.Name)));
+            return
+                Mapper.Map<List<ProductDomainModel>>(_repository.Get<Product>(products => products.Name.ToLower().Contains(productName.ToLower()),
+                    products => products.OrderBy(p => p.Name)));
         }
 
         /// <summary>

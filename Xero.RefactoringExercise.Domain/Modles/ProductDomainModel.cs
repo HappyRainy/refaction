@@ -2,6 +2,9 @@
 
 namespace Xero.RefactoringExercise.Domain.Modles
 {
+    /// <summary>
+    /// Product domain model to be returned to upper layer
+    /// </summary>
     public class ProductDomainModel : DomainModelBase
     {
         public string Name { get; set; }

@@ -3,11 +3,9 @@ using Ninject.Modules;
 using Ninject.Web.Common;
 using Xero.RefactoringExercise.Domain;
 using Xero.RefactoringExercise.Domain.Context;
-using Xero.RefactoringExercise.Domain.Modles;
 using Xero.RefactoringExercise.Domain.Modles.Mapping;
 using Xero.RefactoringExercise.Domain.Services;
 using Xero.RefactoringExercise.WebApi.Infrastructure;
-using Xero.RefactoringExercise.WebApi.Models;
 using Xero.RefactoringExercise.WebApi.Models.Mapping;
 
 namespace Xero.RefactoringExercise.WebApi

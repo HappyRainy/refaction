@@ -4,6 +4,10 @@ using Xero.RefactoringExercise.Domain.Helpers;
 
 namespace Xero.RefactoringExercise.Domain.Modles.Mapping
 {
+
+    /// <summary>
+    /// Auto mapper profile for domain layer
+    /// </summary>
     public class DomainMapperProfile : Profile
     {
         protected override void Configure()

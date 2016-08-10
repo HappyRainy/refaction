@@ -20,7 +20,7 @@ namespace Xero.RefactoringExercise.DAL.Supports
         [DataType(DataType.DateTime)]
         public DateTime? UpdatedOn { get; set; }
 
-        [Required, MaxLength(128)]
+        [Required(AllowEmptyStrings = false), MaxLength(128)]
         public string CreatedBy { get; set; }
 
         [MaxLength(128)]

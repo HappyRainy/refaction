@@ -5,12 +5,15 @@ using Xero.RefactoringExercise.Domain.Context;
 
 namespace Xero.RefactoringExercise.Domain.Services
 {
+    /// <summary>
+    /// Simple user context service to be used to do user authentication and session management
+    /// </summary>
     public class SimpleUserContextService : IUserContextService
     {
         //Dummy User Context for testing purpose only
         private static Dictionary<string, IUserContext> DummyTestingUserContexts = new Dictionary<string, IUserContext>
         {
-            { "1F7A570C-9764-41E5-9F0E-212FA2C703AC", new SimpleUserContext ("XeroTestingUser")} 
+            { "1F7A570C-9764-41E5-9F0E-212FA2C703AC", new AuthenticatedUserContext ("XeroTestingUser")} 
         };
 
         private readonly AppContext _context;

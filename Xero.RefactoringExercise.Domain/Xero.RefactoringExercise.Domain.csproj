@@ -70,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\AppContext.cs" />
-    <Compile Include="Context\SimpleUserContext.cs" />
+    <Compile Include="Context\AuthenticatedUserContext.cs" />
     <Compile Include="DomainModule.cs" />
     <Compile Include="Context\IUserContext.cs" />
     <Compile Include="Exceptions\RecordNotFoundException.cs" />

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.DAL", "Xero.RefactoringExercise.DAL\Xero.RefactoringExercise.DAL.csproj", "{041EFB0D-6597-444D-8C35-6AF04918BA98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.WebApi", "refactor-me\Xero.RefactoringExercise.WebApi.csproj", "{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.RefactoringExercise.WebApi", "Xero.RefactoringExercise.WebApi\Xero.RefactoringExercise.WebApi.csproj", "{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

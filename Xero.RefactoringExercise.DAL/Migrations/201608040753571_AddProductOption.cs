@@ -15,14 +15,14 @@ namespace Xero.RefactoringExercise.DAL.Migrations
                     CreatedOn = c.DateTime(nullable: false, defaultValue: DateTime.UtcNow),
                     UpdatedOn = c.DateTime(nullable: true),
                     CreatedBy = c.String(nullable: false, maxLength: 128),
-                    UpdatedBy = c.String(nullable: false, maxLength: 128),
+                    UpdatedBy = c.String(nullable: true, maxLength: 128),
                     RowVersion = c.Binary(nullable: false, fixedLength: true, timestamp: true, storeType: "rowversion"),
                     ProductId = c.Guid(nullable: false),
                     Name = c.String(nullable: false, maxLength: 100),
                     Description = c.String(nullable: true, maxLength: 500)
                 })
                 .PrimaryKey(t => t.Id)
-                .Index(t => new { t.ProductId, t.Name}, unique: true);
+                .Index(t => new { t.ProductId, t.Name}, unique: true, name: "IX_UNIQUE_ProductId_ProductOptionName");
 
             AddForeignKey("dbo.ProductOption", "ProductId", "dbo.Product", "Id", cascadeDelete: true);
         }
@@ -30,6 +30,7 @@ namespace Xero.RefactoringExercise.DAL.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.ProductOption", "ProductId", "dbo.Product");
+            DropIndex("dbo.ProductOption", "IX_UNIQUE_ProductId_ProductOptionName");
             DropTable("dbo.ProductOption");
         }
     }

@@ -4,6 +4,9 @@ using Xero.RefactoringExercise.Domain.Context;
 
 namespace Xero.RefactoringExercise.WebApi.Infrastructure
 {
+    /// <summary>
+    /// Web api application context
+    /// </summary>
     public class WebApiAppContext : AppContext
     {
         readonly HttpRequestMessage _request;
